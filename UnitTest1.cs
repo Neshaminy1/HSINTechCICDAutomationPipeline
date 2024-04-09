@@ -10,6 +10,7 @@ namespace HSINTechCICDAutomationPipeline
         public void TestMethod1()
         {
             Console.WriteLine("Hello world");
+            Console.WriteLine("This is Test Automation");
         }
     }
 }
