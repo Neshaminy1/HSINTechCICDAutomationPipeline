@@ -21,8 +21,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet "restore HSINTechCICDAutomationPipeline.sln"
+      run: dotnet 'restore HSINTechCICDAutomationPipeline.sln'
     - name: Build
-      run: dotnet build "HSINTechCICDAutomationPipeline.sln" --no-restore
+      run: dotnet build 'HSINTechCICDAutomationPipeline.sln' --no-restore
     - name: Test
-      run: dotnet test "HSINTechCICDAutomationPipeline.csproj" --no-build --verbosity normal
+      run: dotnet test 'HSINTechCICDAutomationPipeline.csproj' --no-build --verbosity normal
