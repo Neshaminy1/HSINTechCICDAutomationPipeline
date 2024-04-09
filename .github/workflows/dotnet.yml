@@ -19,12 +19,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-          dotnet-version: |
-          4.7.2
-          8.0.x
+          dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore HSINTechCICDAutomationPipeline.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build HSINTechCICDAutomationPipeline.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test HSINTechCICDAutomationPipeline.csproj --no-build --verbosity normal
