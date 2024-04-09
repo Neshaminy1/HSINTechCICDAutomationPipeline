@@ -12,6 +12,10 @@ on:
 jobs:
   build:
 
+    env:
+      BUILD_CONFIG: 'Release'
+      SOLUTION: 'HSINTechCICDAutomationPipeline.sln'
+      
     runs-on: ubuntu-latest
 
     steps:
@@ -21,8 +25,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore ./HSINTechCICDAutomationPipeline.sln
+      run: dotnet restore $SOLUTION
     - name: Build
-      run: dotnet build ./HSINTechCICDAutomationPipeline.sln --no-restore
+      run: dotnet build $SOLUTION --no-restore
     - name: Test
-      run: dotnet test ./HSINTechCICDAutomationPipeline.csproj --no-build --verbosity normal
+      run: dotnet test $SOLUTION --no-build --verbosity normal
