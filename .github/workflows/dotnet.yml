@@ -25,4 +25,4 @@ jobs:
     - name: Build
       run: dotnet build ./HSINTechCICDAutomationPipeline/HSINTechCICDAutomationPipeline.sln --no-restore
     - name: Test
-      run: dotnet test ./HSINTechCICDAutomationPipeline/HSINTechCICDAutomationPipeline.csproj --no-build --verbosity normal
+      run: dotnet test ./HSINTechCICDAutomationPipeline/HSINTechCICDAutomationPipeline.sln --no-build --verbosity normal
